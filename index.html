@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathSaya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header><a href="#home" class="logo">Math<span>Saya</span></a><button id="menuBtn"
+            aria-label="Toggle menu">☰</button>
+        <nav id="nav"><a href="#topics">Explore</a><a href="#quiz">Quiz</a><a href="#calculator">Calculator</a><a
+                href="#poll">Poll</a><a href="#about">About</a></nav>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-text"><span class="tag">MATHEMATICS IN THE MODERN WORLD</span>
+                <h1>Big ideas,<br><span>little math wins!</span></h1>
+                <p>A cute, interactive math portal for BSED Science students. Explore number patterns, decode
+                    mathematical symbols, and connect math to science lessons and everyday life.</p><a class="btn"
+                    href="#topics">Let’s explore! ✨</a>
+                <div class="hero-buddy-line"><span class="mini-avatar">🐰</span><span>Study with Mimo, your math
+                        buddy!</span><span class="sparkle">✦</span></div>
+            </div>
+            <div class="hero-shape">
+                <div class="orbit orbit-one">✦</div>
+                <div class="orbit orbit-two">♡</div>
+                <div class="shape">∑</div>
+                <div class="buddy" aria-label="Cute bunny mascot">🐰<span class="buddy-cheek left"></span><span
+                        class="buddy-cheek right"></span></div>
+                <div class="float f1">2 + 2 = 4 ✿</div>
+                <div class="float f2">1, 1, 2, 3, 5...</div>
+                <div class="float f3">Science + Math 🧪</div>
+            </div>
+        </section>
+        <section class="section" id="topics">
+            <div class="section-title"><span class="tag">01 — LEARN</span>
+                <h2>Let’s learn a little at a time</h2>
+                <p>Three friendly topics for future Science teachers and curious learners.</p>
+            </div>
+            <div class="cards">
+                <article class="card purple">
+                    <div class="icon">🔢</div>
+                    <h3>Patterns &amp; Numbers</h3>
+                    <p>Patterns help us find what comes next. They appear in number sequences, nature, and technology.
+                    </p>
+                    <div class="example">2, 4, 6, 8, <b>?</b></div><small>Can you spot the rule?</small>
+                </article>
+                <article class="card blue">
+                    <div class="icon">✏️</div>
+                    <h3>Math Language &amp; Symbols</h3>
+                    <p>Symbols help us describe quantities, patterns, and relationships clearly in math and science.</p>
+                    <div class="example">x + 3 = 7</div><small>Find the value of x.</small>
+                </article>
+                <article class="card yellow">
+                    <div class="icon">🧠</div>
+                    <h3>Problem Solving &amp; Reasoning</h3>
+                    <p>Use logical steps to investigate questions, solve classroom problems, and explain why an answer
+                        makes sense.</p>
+                    <div class="example">Plan → Solve → Check</div><small>Use a clear step-by-step process.</small>
+                </article>
+            </div>
+        </section>
+        <section class="section soft" id="quiz">
+            <div class="section-title"><span class="tag">02 — TRY IT</span>
+                <h2>Quiz time, science stars! 🌟</h2>
+                <p>Choose a topic and answer five shuffled questions. Mimo will cheer you on with instant feedback and
+                    explanations.</p>
+            </div>
+            <div class="quiz-panel">
+                <div class="mascot-note">
+                    <div class="mascot-avatar">🐰</div>
+                    <div><strong>Hi, I’m Mimo!</strong>
+                        <p>Take your time, think like a scientist, and remember: mistakes help us learn. 💗</p>
+                    </div><span class="note-star">✦</span>
+                </div>
+                <div class="quiz-tabs" role="group" aria-label="Choose quiz topic"><button class="quiz-tab active"
+                        data-topic="patterns">Patterns &amp; Numbers</button><button class="quiz-tab"
+                        data-topic="symbols">Math Language &amp; Symbols</button><button class="quiz-tab"
+                        data-topic="reasoning">Problem Solving &amp; Reasoning</button></div>
+                <div class="quiz-status"><span id="quizProgress">Question 1 of 5</span><strong id="quizScore">Score: 0 /
+                        5</strong></div>
+                <div id="quizQuestion" class="q" aria-live="polite"></div>
+                <div class="quiz-controls"><button class="btn" id="nextQuestion" disabled>Next question
+                        →</button><button class="btn btn-light" id="restartQuiz">Shuffle &amp; restart</button></div>
+                <p class="note">Each topic contains five questions. Restart to shuffle their order. These quizzes run in
+                    your browser and do not collect personal information.</p>
+            </div>
+        </section>
+        <section class="section" id="calculator">
+            <div class="section-title"><span class="tag">03 — MATH IN REAL LIFE</span>
+                <h2>Math in action: science &amp; everyday life</h2>
+                <p>Explore percentages for everyday purchases, then convert temperatures like a young scientist! 🌡️</p>
+            </div>
+            <div class="calc-box">
+                <div class="calc-inputs">
+                    <h3>🛍️ Discount calculator</h3><label>Original price (₱)<input type="number" id="price" value="100"
+                            min="0"></label><label>Discount (%)<input type="number" id="discount" value="20" min="0"
+                            max="100"></label><button class="btn" id="calculate">Calculate discount</button>
+                </div>
+                <div class="calc-answer"><span>YOU SAVE</span><strong id="save">₱20.00</strong><span>FINAL
+                        PRICE</span><strong id="final">₱80.00</strong>
+                    <p id="explain">20% of ₱100 is ₱20. The final price is ₱80.</p>
+                </div>
+            </div>
+            <div class="temp-box">
+                <div class="temp-heading"><span class="temp-emoji">🌡️</span>
+                    <div>
+                        <h3>Temperature converter</h3>
+                        <p>Switch between Celsius, Fahrenheit, and Kelvin for science class, lab work, and weather
+                            observations.</p>
+                    </div>
+                </div>
+                <div class="temp-controls"><label>Temperature<input type="number" id="tempValue" value="25" step="any"
+                            aria-label="Temperature value"></label><label>From<select id="tempFrom">
+                            <option value="C">Celsius (°C)</option>
+                            <option value="F">Fahrenheit (°F)</option>
+                            <option value="K">Kelvin (K)</option>
+                        </select></label><label>To<select id="tempTo">
+                            <option value="F">Fahrenheit (°F)</option>
+                            <option value="C">Celsius (°C)</option>
+                            <option value="K">Kelvin (K)</option>
+                        </select></label><button class="btn" id="convertTemp">Convert temperature ✨</button></div>
+                <div class="temp-result" aria-live="polite"><span>YOUR CONVERTED TEMPERATURE</span><strong
+                        id="tempResult">77 °F</strong>
+                    <p id="tempExplain">25 °C × 9/5 + 32 = 77 °F</p>
+                </div>
+                <p class="note">Science note: Kelvin cannot be below absolute zero (0 K). Temperature conversions are
+                    rounded to 2 decimal places when needed.</p>
+            </div>
+        </section>
+        <section class="section soft" id="poll">
+            <div class="section-title"><span class="tag">04 — SHARE YOUR ANSWER</span>
+                <h2>How do you solve a science question? 🔎</h2>
+                <p>Choose the strategy you usually try first. Your demo results are saved in this browser only.</p>
+            </div>
+            <div class="poll-layout">
+                <form class="poll-box" id="pollForm"><label><input type="radio" name="method" value="Look for a pattern"
+                            required> Look for a pattern</label><label><input type="radio" name="method"
+                            value="Use a formula"> Use a formula</label><label><input type="radio" name="method"
+                            value="Draw it"> Draw or visualize it</label><label><input type="radio" name="method"
+                            value="Guess and check"> Guess and check</label><button class="btn" type="submit">Submit
+                        vote</button>
+                    <p class="note">Demo only: votes are saved in this browser, not shared with other visitors.</p>
+                </form>
+                <div class="results">
+                    <h3>Poll results</h3>
+                    <p id="total">No votes yet.</p>
+                    <div id="bars"></div>
+                    <p class="note">Demo only: votes are saved in this browser, not shared with other visitors.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section about" id="about"><span class="tag">05 — ABOUT THE PROJECT</span>
+            <h2>Made for future Science teachers. 💗</h2>
+            <p>MathSaya makes mathematical ideas feel less intimidating through friendly explanations, playful quizzes,
+                and real-life examples that can support BSED Science learning and teaching. Explore the beauty of
+                mathematics through number patterns, Fibonacci sequences, mathematical symbols, logical reasoning, and
+                everyday problem-solving. Discover how math connects with science, nature, technology, and the world
+                around us!</p>
+        </section>
+    </main>
+    <footer><a href="#home" class="logo">Math<span>Saya</span></a>
+        <p>Mathematics in the Modern World · BSED Science Digital Math Portal ♡</p><a href="#home"></a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
